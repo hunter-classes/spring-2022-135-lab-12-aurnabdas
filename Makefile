@@ -7,10 +7,10 @@ tests: tests.o tasks.o
 tasks.o: tasks.cpp tasks.h
 	g++ -std=c++11 -c tasks.cpp
 
-main.o: main.cpp
+main.o: main.cpp tasks.h
 	g++ -std=c++11 -c main.cpp
 
-tests.o: tests.cpp doctest.h
+tests.o: tests.cpp doctest.h tasks.h
 	g++ -std=c++11 -c tests.cpp
 
 clean:
